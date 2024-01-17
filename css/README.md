@@ -1,0 +1,1 @@
+This folder is for storing css styles for the front end

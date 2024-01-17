@@ -1,0 +1,1 @@
+This folder is for storing the javascript used in the front end
