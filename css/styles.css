@@ -1,6 +1,6 @@
 body 
 {
-    background-image: url("../images/shark-icegif.gif");
+    background-image: url("../images/shark-15.jpg");
     background-size: cover;
 }
 
@@ -22,10 +22,11 @@ body
 #loginDiv
 {
     font-size: 30px;
-    width: 30%;
-    margin-left: 60%;
+    width: 40%;
+    margin-top: 10%;
+    margin-left:5%;
     padding: 2px;
-    background-color: #01225f;
+    background-color: #01225f00;
 }
 
 .box {
@@ -38,9 +39,9 @@ body
             mask: var(--mask);
      height: 90%;
      width: 25%;
-     margin-top: 2%;
-     background: linear-gradient(180deg,rgb(96, 163, 250),rgb(1, 62, 160));
-     opacity: 1;
+     /* margin-top: 2%; */
+     /* background: linear-gradient(180deg,rgb(96, 163, 250),rgb(1, 62, 160)); */
+     opacity: .5;
   }
 
 #loggedInDiv
@@ -84,9 +85,9 @@ body
 }
 
 .buttons:hover{
-    background-color: #0700294f;
+    background-color: #5c509700;
     color: #FFFFFF;
-    opacity: 70%;
+    /* opacity: 0%; */
 }
 
 #loginName
@@ -175,3 +176,13 @@ select{
     font-family: 'Ubuntu', sans-serif;
     color: #95060a;
 }
+
+
+.container_row{
+    display: grid;
+  }
+  
+.layer1, .layer2{
+grid-column: 1;
+grid-row: 1;
+ }
