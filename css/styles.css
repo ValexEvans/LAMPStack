@@ -11,8 +11,8 @@ body
 #title 
 {
     font-size: 40px;
-    width: 60%;
-    margin-left: 20%;
+    width: 70%;
+    margin-left: 15%;
     margin-top: 10%;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
@@ -22,27 +22,14 @@ body
 #loginDiv
 {
     font-size: 30px;
-    width: 40%;
-    margin-top: 10%;
-    margin-left:5%;
-    padding: 2px;
-    background-color: #01225f00;
+    width: 450px;
+    margin-top: 75px;
+    margin-left: 80px;
+    /* padding: 2px; */
+    background-color: #06255f80;
+    border: #ffffff solid 5px;
+    border-radius: 20%;
 }
-
-.box {
-    --mask:
-      radial-gradient(40.36px at 57.00px 50%,#000 99%,#0000 101%) 0 calc(50% - 60px)/51% 120px repeat-y,
-      radial-gradient(40.36px at -27px 50%,#0000 99%,#000 101%) 30px 50%/calc(51% - 30px) 120px repeat-y,
-          radial-gradient(40.36px at calc(100% - 57.00px) 50%,#000 99%,#0000 101%) 100% 50%/51% 120px repeat-y,
-      radial-gradient(40.36px at calc(100% + 27.00px) 50%,#0000 99%,#000 101%) calc(100% - 30px) calc(50% - 60px)/calc(51% - 30px) 120px repeat-y;
-    -webkit-mask: var(--mask);
-            mask: var(--mask);
-     height: 90%;
-     width: 25%;
-     /* margin-top: 2%; */
-     /* background: linear-gradient(180deg,rgb(96, 163, 250),rgb(1, 62, 160)); */
-     opacity: .5;
-  }
 
 #loggedInDiv
 {
@@ -77,8 +64,8 @@ body
     font-size: 20px;
     border-radius: 20px;
     width: auto;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     margin-left: 1%;
     background-color: #ffffff;
     font-family: 'Ubuntu', sans-serif;
