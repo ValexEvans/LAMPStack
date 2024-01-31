@@ -96,14 +96,14 @@ body
 	font-size: 30px;
 }
 
-input[type="text"],input[type="password"]{
+/*input[type="text"],input[type="password"]{
     border-radius: 25px;
     text-align: center;
     width: 60%;
     margin-left: 20%;
     margin-bottom: 1%;
     font-family: 'Ubuntu', sans-serif;
-}
+}*/
 
 #inner-title{
     display: inline-block;
