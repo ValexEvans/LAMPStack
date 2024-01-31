@@ -30,12 +30,15 @@
             <!-- login form -->
             <div class="login-box">
                 <input type="text"
+                       id="loginName"
                        class="ele"
                        placeholder="username">
                 <input type="password"
+                       id="loginPassword"
                        class="password ele"
                        placeholder="password">
-                <button class="clkbtn">Login</button>
+                <button class="clkbtn" onclick="doLogin();">Login</button>
+                <span id="loginResult"></span>
             </div>
  
             <!-- signup form -->
@@ -52,7 +55,7 @@
                 <input type="password"
                        class="password ele"
                        placeholder="confirm password">
-                <button class="clkbtn">Signup</button>
+                <button class="clkbtn" onclick="register();">Signup</button>
             </div>
         </div>
     </div>
