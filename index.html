@@ -3,12 +3,58 @@
 	<title>COP 4331 LAMP Stack Demo</title>
 	<script type="text/javascript" src="js/md5.js"></script>
 	<script type="text/javascript" src="js/code.js"></script>
-    <link href="css/styles.css" rel="stylesheet">	
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet">	
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body class="body">
 
-	<div id="loginDiv">
+    <!-- container div -->
+    <div class="container">
+ 
+        <!-- upper button section to select
+             the login or signup form -->
+        <div class="slider"></div>
+        <div class="btn">
+            <button class="login">Login</button>
+            <button class="signup">Signup</button>
+        </div>
+ 
+        <!-- Form section that contains the
+             login and the signup form -->
+        <div class="form-section">
+ 
+            <!-- login form -->
+            <div class="login-box">
+                <input type="text"
+                       class="ele"
+                       placeholder="username">
+                <input type="password"
+                       class="password ele"
+                       placeholder="password">
+                <button class="clkbtn">Login</button>
+            </div>
+ 
+            <!-- signup form -->
+            <div class="signup-box">
+                <input type="text"
+                       class="name ele"
+                       placeholder="firstname">
+                <input type="text"
+                       class="ele"
+                       placeholder="lastname">
+                <input type="password"
+                       class="password ele"
+                       placeholder="password">
+                <input type="password"
+                       class="password ele"
+                       placeholder="confirm password">
+                <button class="clkbtn">Signup</button>
+            </div>
+        </div>
+    </div>
+
+<!--	<div id="loginDiv">
 		<h1 id="title">Welcome to Contact Manager</h1>
 		<span id="inner-title">PLEASE LOG IN</span>
 		<input type="text" id="loginName" placeholder="Username" /><br />
@@ -17,6 +63,7 @@
 		<span id="loginResult"></span>
 		<span id="inner-title">Don't have an account? <button type="button" class="register buttons" onclick="register();"> Register </button></p>
 
-	</div>
+	</div> -->
+    <script type="text/javascript" src="js/slider.js"></script>
 </body>
 </html>
