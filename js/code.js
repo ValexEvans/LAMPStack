@@ -64,11 +64,43 @@ function doLogin()
 
 function doRegister()
 {
+	// reset required red borders
+	document.getElementById("registerFirstName").className = "ele";
+	document.getElementById("registerLastName").className = "ele";
+	document.getElementById("registerLogin").className = "ele";
+	document.getElementById("registerPassword").className = "ele";
+	
 	// collect values from form
 	let firstName = document.getElementById("registerFirstName").value;
 	let lastName = document.getElementById("registerLastName").value;
 	let login = document.getElementById("registerLogin").value;
 	let password = document.getElementById("registerPassword").value;
+
+	if (firstName === "")
+	{
+		document.getElementById("registerFirstName").className = "ele required";
+		document.getElementById("registerResult").innerHTML = "Please fill out all fields";
+		return;
+	}
+	if (lastName === "")
+	{
+		document.getElementById("registerLastName").className = "ele required";
+		document.getElementById("registerResult").innerHTML = "Please fill out all fields";
+		return;
+	}
+	if (login === "")
+	{
+		document.getElementById("registerLogin").className = "ele required";
+		document.getElementById("registerResult").innerHTML = "Please fill out all fields";
+		return;
+	}
+	if (password === "")
+	{
+		document.getElementById("registerPassword").className = "ele required";
+		document.getElementById("registerResult").innerHTML = "Please fill out all fields";
+		return;
+	}
+	
 
 	// resets fields
 	userId = 0;
