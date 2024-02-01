@@ -1,4 +1,4 @@
-const urlBase = 'http://COP4331-5.com/LAMPAPI';
+const urlBase = '138.197.67.189';
 const extension = 'php';
 
 let userId = 0;
@@ -13,6 +13,8 @@ function doLogin()
 	
 	let login = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
+	console.log("user/pass= " + login);
+	console.log(password);
 //	var hash = md5( password );
 	
 	document.getElementById("loginResult").innerHTML = "";
@@ -20,8 +22,10 @@ function doLogin()
 	let tmp = {login:login,password:password};
 //	var tmp = {login:login,password:hash};
 	let jsonPayload = JSON.stringify( tmp );
+	console.log("jsonPayload= " + jsonPayload);
 	
-	let url = urlBase + '/Login.' + extension;
+	let url = 'http://' + urlBase + '/LAMPAPI/Login.' + extension;
+	//let url = '/var/www/html/LAMPAPI/Login.' + extension;
 
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -56,6 +60,57 @@ function doLogin()
 		document.getElementById("loginResult").innerHTML = err.message;
 	}
 
+}
+
+function doRegister()
+{
+	// collect values from form
+	let firstName = document.getElementById("registerFirstName").value;
+	let lastName = document.getElementById("registerLastName").value;
+	let login = document.getElementById("registerLogin").value;
+	let password = document.getElementById("registerPassword").value;
+
+	// resets fields
+	userId = 0;
+	firstName = "";
+	lastName = "";
+	document.getElementById("registerResult").innerHTML = "";
+
+	// create json payload
+	let tmp = {login:login,password:password,firstName:firstName,lastName:lastName};
+	let jsonPayload = JSON.stringify( tmp );
+	console.log("jsonPayload= " + jsonPayload);
+	
+	let url = 'http://' + urlBase + '/LAMPAPI/Register.' + extension;
+
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				let jsonObject = JSON.parse( xhr.responseText );
+				userId = jsonObject.id;
+		
+				if( userId < 1 )
+				{
+					let error = jsonObject.error;
+					document.getElementById("loginResult").innerHTML = err;
+					return;
+				}
+	
+				window.location.reload();
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		document.getElementById("loginResult").innerHTML = err.message;
+	}
 }
 
 function saveCookie()

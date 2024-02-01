@@ -125,6 +125,15 @@ body
     color: #ff0008;
 }
 
+#registerResult{
+    display: inline-block;
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #ff0008;
+}
+
 #userName{
     display: inline-block;
     width: 80%;

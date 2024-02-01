@@ -45,17 +45,22 @@
             <div class="signup-box">
                 <input type="text"
                        class="name ele"
+                       id="registerFirstName"
                        placeholder="firstname">
                 <input type="text"
                        class="ele"
+                       id="registerLastName"
                        placeholder="lastname">
+                <input type="text"
+                       class="ele"
+                       id="registerLogin"
+                       placeholder="username">
                 <input type="password"
                        class="password ele"
+                       id="registerPassword"
                        placeholder="password">
-                <input type="password"
-                       class="password ele"
-                       placeholder="confirm password">
-                <button class="clkbtn" onclick="register();">Signup</button>
+                <button class="clkbtn" onclick="doRegister();">Signup</button>
+                <span id="registerResult"></span>
             </div>
         </div>
     </div>
