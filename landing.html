@@ -2,68 +2,196 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, 
-						initial-scale=1.0" />
-    <title>GeeksforGeeks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/LAMPStack-front-end/css/landingStyles.css" />
+    <title>Two Column Layout</title>
 </head>
 
 <body>
-    
-    
-    <!-- container div -->
+
     <div class="container">
-        
-        <div class="logout-button">
-            <button class="buttons" id="logout">Logout</button>
-        </div>
-        <header>
-            <h1 class="heading">Welcome</h1>
-            <h3 class="title">Modify Contacts or Color</h3>
-            
-            
-                
- 
-        </header>
-
-        <!-- upper button section to select
-			the contacts or color form -->
-        <div class="slider"></div>
-        <div class="btn">
-            <button class="contacts">Contacts</button>
-            <button class="color">Color</button>
-        </div>
-
-        <!-- Form section that contains the
-			color and the contacts form -->
-        <div class="form-section">
-            <!-- contacts form -->
-            <div class="contacts-box">
-                <input type="text" class="name ele" placeholder="Enter first name" />
-                <input type="text" class="name ele" placeholder="Enter last name" />
-                <input type="text" class="email ele" placeholder="Enter email" />
-                <input type="text" class="password ele" placeholder="Enter phone number" />
-                <div class="button-container">
-                    <button class="buttons" id="addContacts">Add</button>
-                    <button class="buttons" id="searchContacts">Search</button>
-                    <button class="buttons" id="deleteContacts">Delete</button>
-                </div>
-            </div>
-
-            <!-- color form -->
-            <div class="color-box">
-                <input type="text" class="color ele" placeholder="Enter color" />
-                <div class="button-container">
-                    <button class="buttons" id="addColor">Add</button>
-                    <button class="buttons" id="searchColor">Seach</button>
-                    <button class="buttons" id="deleteColor">Delete</button>
-                </div>
+        <div class="left-column">
+            <h2 class="title">Contacts Manager</h2>
+            <div class="button-box">
+                <button class="button">Homepage</button>
+                <button class="button">About</button>
+                <button class="button">Logout</button>
             </div>
         </div>
-        
-    </div>
-    <script src="js/landing.js"></script>
+        <div class=" right-column">
+            <header>
+                <h1 class="heading">Welcome Back, Jenny Wilson</h1>
+            </header>
+            <div class="search-box">
+                <div class="search">
+                    <input type="text" class="ele" id="search" placeholder="Search" />
+                </div>
+                <div class="search-button-box">
+                    <button class="search-button" onclick="""> Search</button>
+                    </div>
+                </div>
+                <div class=" info-box">
+
+                </div>
+
+                <div class="info-title-box">
+                    <div class="column">
+                        <h4 class="title">First Name</h4>
+
+                    </div>
+                    <div class="column">
+                        <h4 class="title">Last Name</h4>
+
+                    </div>
+                    <div class="column">
+                        <h4 class="title">Phone Number</h4>
+
+                    </div>
+                    <div class="column">
+                        <h4 class="title">Email</h4>
+
+                    </div>
+                </div>
+                <div class="info-contact-box">
+                    <div class="row">
+
+                        <div class="contact-list-box">
+                            <div class="column">
+                                <input type="text" class="firstName ele" placeholder="Enter first name" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="lastName ele" placeholder="Enter last name" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="email ele" placeholder="Enter email" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="password ele" placeholder="Enter number" />
+
+                            </div>
+                            <div class="column">
+                                <div class="modify-button-box">
+                                    <button class="modify-button" onclick="deleteContact()">delete</button>
+                                    <button class="modify-button" onclick="editContact()">Edit</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="contact-list-box">
+                            <div class="column">
+                                <input type="text" class="firstName ele" placeholder="Enter first name" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="lastName ele" placeholder="Enter last name" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="email ele" placeholder="Enter email" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="password ele" placeholder="Enter number" />
+
+                            </div>
+                            <div class="column">
+                                <div class="modify-button-box">
+                                    <button class="modify-button" onclick="deleteContact()">delete</button>
+                                    <button class="modify-button" onclick="editContact()">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="contact-list-box">
+                            <div class="column">
+                                <input type="text" class="firstName ele" placeholder="Enter first name" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="lastName ele" placeholder="Enter last name" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="email ele" placeholder="Enter email" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="password ele" placeholder="Enter number" />
+
+                            </div>
+                            <div class="column">
+                                <div class="modify-button-box">
+                                    <button class="modify-button" onclick="deleteContact()">delete</button>
+                                    <button class="modify-button" onclick="editContact()">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="contact-list-box">
+                            <div class="column">
+                                <input type="text" class="firstName ele" placeholder="Enter first name" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="lastName ele" placeholder="Enter last name" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="email ele" placeholder="Enter email" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="password ele" placeholder="Enter number" />
+
+                            </div>
+                            <div class="column">
+                                <div class="modify-button-box">
+                                    <button class="modify-button" onclick="deleteContact()">delete</button>
+                                    <button class="modify-button" onclick="editContact()">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="contact-list-box">
+                            <div class="column">
+                                <input type="text" class="firstName ele" placeholder="Enter first name" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="lastName ele" placeholder="Enter last name" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="email ele" placeholder="Enter email" />
+
+                            </div>
+                            <div class="column">
+                                <input type="text" class="password ele" placeholder="Enter number" />
+
+                            </div>
+                            <div class="column">
+                                <div class="modify-button-box">
+                                    <button class="modify-button" onclick="deleteContact()">delete</button>
+                                    <button class="modify-button" onclick="editContact()">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
 </body>
 
 </html>
