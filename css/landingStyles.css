@@ -13,13 +13,13 @@ body {
     color: #ffffff;
     font-size: 2em;
     margin-left: 10px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 
 .title {
     color: #ffffff;
     font-size: 1em;
-    margin-left: 10px;
+
 }
 
 .container {
@@ -90,6 +90,8 @@ body {
 
 }
 
+
+
 .search-button {
     width: 100%;
     padding: 10px 45px;
@@ -105,7 +107,7 @@ body {
     box-sizing: border-box;
     padding: 10px 45px;
     cursor: pointer;
-    background-color: #093c72;
+    background-color: #4083cb;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -157,18 +159,26 @@ body {
 }
 
 .info-title-box {
-    display: flex;
-    padding-right: 28%;
+    width: 100%;
+    margin: 0;
     background-color: #093c72;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.contact-list-box {
+.info-top-row {
     display: flex;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding-left: 1%;
+    padding-right: 20%;
 
+}
 
-
+.info-bottom-row {
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
 }
 
 .column {
@@ -177,7 +187,9 @@ body {
     padding: 10px;
 }
 
-
+.contact-list-box {
+    display: flex;
+}
 
 .info-contact-box {
 
@@ -191,7 +203,7 @@ body {
 }
 
 .scrolling-window {
-    height: 500px;
+    height: 460px;
     /* Set the desired height for your scrolling window */
     overflow: auto;
     /* Optional: Add a border for visual clarity */
@@ -201,11 +213,6 @@ body {
     flex: 1;
     box-sizing: border-box;
     margin: 8px;
-}
-
-/* Add some styling to make it visually appealing */
-.row {
     background-color: #fff;
     border-radius: 5px;
-
 }

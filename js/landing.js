@@ -251,6 +251,13 @@ function createContactElement(contact) {
   return contactElement;
 }
 
+// Function to clear previously added HTML
+function clearContactList() {
+	const scrollingWindow = document.getElementById("scrollingWindow");
+	scrollingWindow.innerHTML = ''; // Clear the content
+	currentIndex = 0; // Reset the index for dummy data
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   const scrollingWindow = document.getElementById("scrollingWindow");
 
